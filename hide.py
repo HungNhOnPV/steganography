@@ -79,7 +79,7 @@ def retr(filename):
             else:
                 binary = binary + digit
                 if (binary[-16:] == '1111111111111110'):
-                    print "Success"
+                    print("Success")
                     return bin2str(binary[:-16])
         return bin2str(binary)
     return "Incorrect Image mode, couldn't retrieve"
@@ -96,11 +96,11 @@ def Main():
     (options, args) = parser.parse_args()
     if (options.hide != None):
         text = raw_input("Enter a message to hide: ")
-        print hide(options.hide, text)
+        print(hide(options.hide, text))
     elif (options.retr != None):
-        print retr(options.retr)
+        print(retr(options.retr))
     else:
-        print parser.usage
+        print(parser.usage)
         exit(0)
 
 
